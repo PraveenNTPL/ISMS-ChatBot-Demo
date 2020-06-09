@@ -1,0 +1,44 @@
+﻿<!--<div class="image1" [ngStyle]="{'background-image': 'url(' + loadImage() + ')', 'height':'300px','background-size': '100% 300px' }" >-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-4 col-sm-4">
+            </div>
+            
+            <div class="col-sm-4 col-sm-4 col-sm-4">
+                <Br>
+                <br>
+                <br>
+
+<h2 style="color:blue; text-align: center;" >Store Login</h2>
+<img id="hiddenLoginBKImage" src="../../images/LoginBackGround-1.png" width="430" height="200" style="display:none;" /> 
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group" style="text-align: center;" >
+        <label for="username" style="color:red; font-weight: bold;" >Store ID</label>
+        <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }"  style="text-align: center;" />
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+        </div>
+    </div>
+    <div class="form-group" style="text-align: center;" >
+        <label for="password" style="color:red; font-weight: bold;" >Password</label>
+        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"  style="text-align: center;" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+        </div>
+    </div>
+    <div class="form-group" style="text-align: center;">
+        <button [disabled]="loading" class="btn btn-primary  mr-3">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Login
+        </button>
+
+        <a routerLink="/register" class="btn btn-primary">Register</a>
+    </div>
+</form>
+
+        </div>
+        </div>
+        </div>
+
+<!--</div>-->

@@ -1,0 +1,44 @@
+﻿<!-- credits -->
+<div class="image1" [ngStyle]="{'background-image': 'url(' + loadImage() + ')' , 'height':'600px','background-size': '100% 600px' }" >
+<div class="text-center">
+    <p>
+        <img src="../images/NTPLogo.png" width="100" height="100" /> <span style="font-size:90%;position: relative; bottom: -12px;font-family:Serif;font-weight: bold;">&nbsp;ISMS</span>
+    </p>
+</div>
+<img id="hiddenLoginBKImage" src="../images/LoginBackGround-1.png" width="430" height="200" style="display:none;" /> 
+<!-- nav -->
+
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/">Home</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+    </div>
+</nav>
+
+<alert></alert>
+<router-outlet allign = "text-center"></router-outlet>
+<!--<div class="container">
+    <div class="row">
+        <div class="col-sm-4 col-sm-4 col-sm-4">
+        </div>
+        
+        <div class="col-sm-4 col-sm-4 col-sm-4">
+            <alert></alert>
+            <router-outlet allign = "text-center"></router-outlet>
+        </div>
+    </div>
+</div>-->
+<!-- main app container -->
+<!--
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <alert></alert>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>-->
+</div>
+
