@@ -5,11 +5,13 @@
         "type": "git",
         "url": ""
     },
+    "engines": {
+        "node": "12.16.2",
+        "npm": "6.14.4"
+    },
     "scripts": {
-        "start": "http-server",
-        "lint": "tslint \"src/**/*.ts\"",
-        "preinstall": "npm install -g http-server",
-        "postinstall": "ng build && mv dist/* ."
+        "build": "./node_modules/webpack/bin/webpack.js -p --progress && node server.js",
+        "start": "webpack-dev-server"
     },
     "license": "MIT",
     "dependencies": {
