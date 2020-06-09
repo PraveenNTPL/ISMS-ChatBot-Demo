@@ -11,7 +11,7 @@
     },
     "scripts": {
         "build": "./node_modules/webpack/bin/webpack.js -p --progress && node server.js",
-        "start": "webpack-dev-server",
+        "dev": "webpack-dev-server",
         "heroku-postbuild": "webpack -p"
     },
     "license": "MIT",
