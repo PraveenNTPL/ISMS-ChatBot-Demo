@@ -6,8 +6,10 @@
         "url": ""
     },
     "scripts": {
-        "build": "webpack --mode production",
-        "start": "webpack-dev-server --mode development --open"
+        "start": "http-server",
+        "lint": "tslint \"src/**/*.ts\"",
+        "preinstall": "npm install -g http-server",
+        "postinstall": "ng build && mv dist/* ."
     },
     "license": "MIT",
     "dependencies": {
