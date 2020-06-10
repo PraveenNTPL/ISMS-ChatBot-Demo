@@ -79,6 +79,8 @@ module.exports = {
     //     runtimeChunk: true
     // },
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: true,
+        inline: true,
+        port: process.env.PORT || 8010
     }
 }
