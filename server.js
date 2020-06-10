@@ -11,7 +11,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname/src, 'index.html'));
 });
 
-app.listen(port);
+//app.listen(port);
 app.listen(port, function () {
     console.log('Express server listening on %d', port);
   });
