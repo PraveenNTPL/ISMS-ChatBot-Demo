@@ -12,3 +12,6 @@ app.get('*', (req, res) => {
 });
 
 app.listen(port);
+app.listen(port, function () {
+    console.log('Express server listening on %d', port);
+  });
